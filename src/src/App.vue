@@ -35,7 +35,7 @@ methods: {
         let res
         for(let i = 1; i<20; i++) {
             res = await getResult(i)
-            this.results.push([i,res/100])
+            this.results.push([i,res/100000000])
 
         }
     }
