@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <h3> Jobs </h3>
+    <HelloWorld msg=""/>
+    <h3> Datafeeds </h3>
     <table>
         <tr>
-        <th>Job ID</th>
+        <th>Datafeed ID</th>
         <th> Result </th>
     </tr>
     <tr v-for="res in results">
-        <td v-if="res[1]!==0">{{res[0]}}</td>
-        <td v-if="res[1]!==0">{{res[1]}}</td>
+        <td v-if="res[1]!==0"> <a :href="'https://razorscan.io/#/custom/'+res[0]"> {{res[0]}} </a></td>
+        <td v-if="res[1]!==0">  <a :href="'https://razorscan.io/#/custom/'+res[0]"> {{res[1]}}</a> </td>
     </tr>
 </table>
   </div>
@@ -59,5 +59,9 @@ async mounted() {
 table {
   display: inline-block;
   margin: 0 10px;
+}
+
+a {
+  color: #42b983;
 }
 </style>
