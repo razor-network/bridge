@@ -3,7 +3,7 @@ import App from './App.vue'
 import Skale from './Skale.vue'
 
 Vue.config.productionTip = false
-console.log('lol',process.env.VUE_APP_NETWORK)
+// console.log('lol',process.env.VUE_APP_NETWORK)
 if (process.env.VUE_APP_NETWORK == "matic") {
     new Vue({
         render: h => h(App),
