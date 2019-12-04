@@ -1,12 +1,12 @@
 <template>
   <div class="hello">
-    <h1>🌉 Razor → Matic Bridge 🌉</h1>
+    <h1>🌉 Razor → SKALE Bridge 🌉</h1>
 
-    <h2> Make sure to install metamask and set provider to Matic testnet at 'https://testnet2.matic.network' </h2>
+    <h2> Make sure to install metamask and set provider to SKALE testnet at 'https://sip2211-0.skalenodes.com:10007' </h2>
     <p>
-     This is a Razor → Matic bridge </p>
+     This is a Razor → SKALE bridge </p>
      <p>Create and see your query at <a href = "https://razorscan.io/#/query" >https://razorscan.io/#/query</a> </p>
-    <p> Access the result from 0x9b81b7B027A5076025e26a9DcD639b31e0827Ed2 on Matic testnet.</p>
+    <p> Access the result from 0xdEFe561eA4f95d957A0199C26cfCFa1aF6EF31f6 on SKALE testnet.</p>
      <p><button @click="toggle"  v-if="!show">Show ABI</button></p>
      <p><button @click="toggle"  v-if="show">Hide ABI</button></p>
      <code v-if="show">[{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"id","type":"uint256"},{"name":"result","type":"uint256"}],"name":"setResult","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"id","type":"uint256"}],"name":"getResult","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}]</code>

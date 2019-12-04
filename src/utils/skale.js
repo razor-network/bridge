@@ -28,7 +28,7 @@ export const enableEth = async () => {
 export const getResult = async (jobId) => {
   let bridgeBuild = require('../../build/contracts/Bridge.json')
 
-  let bridge = new web3.eth.Contract(bridgeBuild['abi'], '0xe44c3c78782aADC88E7BDc920e0570fF93b3585a')
+  let bridge = new web3.eth.Contract(bridgeBuild['abi'], bridgeBuild['networks'][1].address)
 
   // const accounts = await web3.eth.getAccounts()
   accounts = await ethereum.enable()
