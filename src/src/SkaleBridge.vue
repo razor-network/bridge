@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <HelloWorld msg=""/>
+    <Skale msg=""/>
     <h3> Datafeeds </h3>
     <table>
         <tr>
@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import HelloWorld from './components/Skale.vue'
+import Skale from './components/Skale.vue'
 import { enableEth, getResult } from '../utils/skale'
 
 export default {
-  name: 'app',
+  name: 'skale',
   components: {
-    HelloWorld
+    Skale
 },
 data() {
       return {
