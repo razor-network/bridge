@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <Skale msg=""/>
+    <Skale :msg="address"/>
     <h3> Datafeeds </h3>
     <table>
         <tr>
@@ -18,7 +18,7 @@
 
 <script>
 import Skale from './components/Skale.vue'
-import { enableEth, getResult } from '../utils/skale'
+import { enableEth, getResult, getAddress } from '../utils/skale'
 
 export default {
   name: 'skale',
@@ -27,7 +27,8 @@ export default {
 },
 data() {
       return {
-          results:[]
+          results:[],
+          address: 'loading...'
       }
   },
 methods: {
@@ -42,7 +43,8 @@ methods: {
 },
 async mounted() {
     await enableEth()
-    await this.getResults()
+    this.getResults()
+    this.address = await getAddress()
 }
 }
 </script>

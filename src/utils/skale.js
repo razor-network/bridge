@@ -38,3 +38,8 @@ export const getResult = async (jobId) => {
   // console.log(res)
   return res
 }
+
+export const getAddress = async () => {
+    let bridgeBuild = require('../../build/contracts/Bridge.json')
+    return bridgeBuild['networks'][1].address
+}
