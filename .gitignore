@@ -1,6 +1,6 @@
 node_modules/
 src/node_modules/
 src/dist/
-.secret
+.mnemonic
 .skale
 src/.env

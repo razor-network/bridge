@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Web3 from 'web3'
-var _ = require('lodash/object')
+//var _ = require('lodash/object')
 
 // import BN from 'bignumber.js'
 let web3
-let accounts
+//let accounts
 // let networkid = 4
 
 // let error
@@ -28,18 +28,18 @@ export const enableEth = async () => {
 export const getResult = async (jobId) => {
   let bridgeBuild = require('../../build/contracts/Bridge.json')
 
-  let bridge = new web3.eth.Contract(bridgeBuild['abi'], bridgeBuild['networks'][8995].address)
+  let bridge = new web3.eth.Contract(bridgeBuild['abi'], bridgeBuild['networks'][80001].address)
 
   // const accounts = await web3.eth.getAccounts()
-  accounts = await ethereum.enable()
+  
 
   // console.log(accounts)
   const res = await bridge.methods.getResult(jobId).call()
-  // console.log(res)
+  
   return res
 }
 
 export const getAddress = async () => {
     let bridgeBuild = require('../../build/contracts/Bridge.json')
-    return bridgeBuild['networks'][8995].address
+    return bridgeBuild['networks'][80001].address
 }
