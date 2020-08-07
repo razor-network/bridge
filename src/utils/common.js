@@ -31,12 +31,16 @@ export const getResult = async (jobId) => {
   let bridge = new web3.eth.Contract(bridgeBuild['abi'], bridgeBuild['networks'][80001].address)
 
   // const accounts = await web3.eth.getAccounts()
-  
+  let result = []
 
   // console.log(accounts)
   const res = await bridge.methods.getResult(jobId).call()
+  let name  = (await bridge.methods.getJob(jobId).call()).name
+
+  result.push(name)
+  result.push(res)
   
-  return res
+  return result
 }
 
 export const getAddress = async () => {
