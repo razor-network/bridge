@@ -18,7 +18,7 @@
  *
  */
 
-const HDWalletProvider = require('truffle-hdwallet-provider')
+const HDWalletProvider = require('@truffle/hdwallet-provider')
 // const infuraKey = "fj4jll3k....."
 //
 const fs = require('fs')
@@ -50,8 +50,8 @@ module.exports = {
         // },
 
         matic: {
-            provider: () => new HDWalletProvider(mnemonic, 'https://testnet2.matic.network'),
-            network_id: 8995,
+            provider: () => new HDWalletProvider(mnemonic, 'https://rpc-mumbai.matic.today'),
+            network_id: 80001,
             gas: 8000000,
             confirmations: 0,
             timeoutBlocks: 200,
@@ -106,7 +106,7 @@ module.exports = {
     // Configure your compilers
     compilers: {
         solc: {
-            version: '0.5.10', // Fetch exact version from solc-bin (default: truffle's version)
+            version: '0.6.11', // Fetch exact version from solc-bin (default: truffle's version)
             // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
             // settings: {          // See the solidity docs for advice about optimization and evmVersion
             //  optimizer: {

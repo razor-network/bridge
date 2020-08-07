@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>🌉 Razor → Matic Bridge 🌉</h1>
 
-    <h2> Make sure to install metamask and set provider to Matic testnet at 'https://testnet2.matic.network' </h2>
+    <h2> Make sure to install metamask and set provider to Matic testnet at 'https://rpc-mumbai.matic.today' </h2>
     <p>
      This is a Razor → Matic bridge </p>
      <p>Create and see your query at <a href = "https://razorscan.io/#/query" >https://razorscan.io/#/query</a> </p>

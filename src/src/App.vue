@@ -9,8 +9,8 @@
         <th> Result </th>
     </tr>
     <tr v-for="res in results">
-        <td v-if="res[1]!==0"> <a :href="'https://razorscan.io/#/custom/'+res[0]"> {{res[0]}} </a></td>
-        <td v-if="res[1]!==0">  <a :href="'https://razorscan.io/#/custom/'+res[0]"> {{res[1]}}</a> </td>
+        <td v-if="res[2]!==0"> <a :href="'https://razorscan.io/#/custom/'+res[0]"> {{res[1]}} </a></td>
+        <td v-if="res[2]!==0">  <a :href="'https://razorscan.io/#/custom/'+res[0]"> {{res[2]}}</a> </td>
     </tr>
 </table>
   </div>
@@ -36,8 +36,7 @@ methods: {
         let res
         for(let i = 1; i<20; i++) {
             res = await getResult(i)
-            this.results.push([i,res/100000000])
-
+            this.results.push([i,res[0],res[1]/100000000])
         }
     }
 },
