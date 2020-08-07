@@ -7,3 +7,13 @@
   from = "https://skale.razor.network/"
   to = "https://skale.razor.to/"
   force = true
+  
+[[redirects]]
+  from = "http://matic.razor.network/"
+  to = "https://matic.razor.to/"
+  force = true
+
+[[redirects]]
+  from = "http://skale.razor.network/"
+  to = "https://skale.razor.to/"
+  force = true
