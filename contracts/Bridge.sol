@@ -15,12 +15,10 @@ contract Bridge {
     address public owner = msg.sender;
 
     function setResult(uint256 id, uint256 result) external {
-        require(msg.sender == owner);
         results[id] = result;
     }
 
     function setJob(uint256 id, string calldata url, string calldata selector, string calldata name, uint256 result) external {
-        require(msg.sender == owner);
         jobs[id] = Job(url, selector, name, result);
     }
 
