@@ -3,4 +3,5 @@ src/node_modules/
 src/dist/
 .secret
 .skale
+.pk
 src/.env
