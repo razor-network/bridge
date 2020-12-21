@@ -29,7 +29,7 @@ export const enableEth = async () => {
 export const getResult = async (jobId) => {
   let bridgeBuild = require('../../build/contracts/Bridge.json')
 
-  let bridge = new meterify.eth.Contract(bridgeBuild['abi'], '0x67182b1cC3f09fdF3cBb27592b9F871839f4B020')
+  let bridge = new meterify.eth.Contract(bridgeBuild['abi'], '0x18E56c34E5551dD6203e060eea67C8765404193C')
   console.log(bridge)
   // const accounts = await web3.eth.getAccounts()
   let result = []
@@ -45,5 +45,5 @@ export const getResult = async (jobId) => {
 }
 
 export const getAddress = async () => {
-    return '0x67182b1cC3f09fdF3cBb27592b9F871839f4B020'
+    return '0x18E56c34E5551dD6203e060eea67C8765404193C'
 }

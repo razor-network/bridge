@@ -1,6 +1,6 @@
 const mtr = require("meterify").meterify;
 const Web3 = require("web3");
-const meterify = mtr(new Web3(), "http://c01.meter.io:8669");
+const meterify = mtr(new Web3(), "http://s01.meter.io:8669");
 const fs = require('fs')
 const pk = fs.readFileSync(".pk").toString().trim()
 let bridgeBuild = require('./build/contracts/Bridge.json')
