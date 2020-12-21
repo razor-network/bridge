@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Skale from './SkaleBridge.vue'
+import Moonbeam from './MoonbeamBridge.vue'
 
 Vue.config.productionTip = false
 // console.log('lol',process.env.VUE_APP_NETWORK)
@@ -11,5 +12,9 @@ if (process.env.VUE_APP_NETWORK === "matic") {
 } else if (process.env.VUE_APP_NETWORK === "skale") {
     new Vue({
         render: h => h(Skale),
+    }).$mount('#app')
+} else if (process.env.VUE_APP_NETWORK === "moonbeam") {
+    new Vue({
+        render: h => h(Moonbeam),
     }).$mount('#app')
 }
