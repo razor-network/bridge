@@ -7,7 +7,7 @@ import AlgorandBridge from './AlgorandBridge'
 
 Vue.config.productionTip = false
 // console.log('lol',process.env.VUE_APP_NETWORK)
-if (process.env.VUE_APP_NETWORK === "matic" || true) {
+if (process.env.VUE_APP_NETWORK === "algorand") {
   new Vue({
       render: h => h(AlgorandBridge),
   }).$mount('#app')
