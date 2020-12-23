@@ -3,10 +3,15 @@ import App from './App.vue'
 import Skale from './SkaleBridge.vue'
 import Meter from './MeterBridge.vue'
 import Moonbeam from './MoonbeamBridge.vue'
+import AlgorandBridge from './AlgorandBridge'
 
 Vue.config.productionTip = false
 // console.log('lol',process.env.VUE_APP_NETWORK)
-if (process.env.VUE_APP_NETWORK === "matic") {
+if (process.env.VUE_APP_NETWORK === "algorand") {
+  new Vue({
+      render: h => h(AlgorandBridge),
+  }).$mount('#app')
+} else if (process.env.VUE_APP_NETWORK === "matic") {
     new Vue({
         render: h => h(App),
     }).$mount('#app')
@@ -23,4 +28,4 @@ else if (process.env.VUE_APP_NETWORK === "moonbeam") {
     new Vue({
         render: h => h(Meter),
     }).$mount('#app')
-} 
+}
