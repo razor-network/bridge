@@ -1,69 +1,73 @@
+
+
 <template>
-  <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <HelloWorld :msg="address"/>
-    <h3> Datafeeds </h3>
-    <table>
-        <tr>
-        <th>Datafeed ID</th>
-        <th> Result </th>
-    </tr>
-    <tr v-for="res in results">
-        <td v-if="res[2]!==0"> <a :href="'https://razorscan.io/#/custom/'+res[0]"> {{res[1]}} </a></td>
-        <td v-if="res[2]!==0">  <a :href="'https://razorscan.io/#/custom/'+res[0]"> {{res[2]}}</a> </td>
-    </tr>
-</table>
-  </div>
+    <div id='main-app'>
+        <select class="bridge-select" v-model="selected">
+            <option v-for="item in items" :value="item.val" :key="item.id">
+            {{ item.val }}
+            </option>
+        </select>
+
+        <div>
+            <Algorand v-if="selected == 'Algorand'"/>
+            <Skale v-if="selected == 'Skale'"/>
+            <Matic v-if="selected == 'Matic'"/>
+            <Moonbeam v-if="selected == 'Moonbeam'"/>
+            <Meter v-if="selected == 'Meter'"/>
+        </div>
+    </div>
+    
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import { enableEth, getResult, getAddress } from '../utils/common'
+    import Skale from './SkaleBridge.vue';
+    import Meter from './MeterBridge.vue';
+    import Moonbeam from './MoonbeamBridge.vue';
+    import Algorand from './AlgorandBridge';
+    import Matic from './MaticBridge';
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-},
-data() {
-      return {
-          results:[],
-          address:'loading...'
-      }
-  },
-methods: {
-    async getResults() {
-        let res
-        for(let i = 1; i<20; i++) {
-            res = await getResult(i)
-            this.results.push([i,res[0],res[1]/100000000])
+    name: '#main-app',
+     components: {
+    Skale,
+    Meter,
+    Moonbeam,
+    Algorand,
+    Matic
+    },
+    data () {
+        return{
+            selected: 'Algorand',
+        input: '',
+        items: [
+            {id: 1, val: 'Algorand'},
+            {id: 2, val: 'Skale'},
+            {id: 3, val: 'Matic'},
+            {id: 4, val: 'Moonbeam'},
+            {id: 5, val: 'Meter'}
+        ]
         }
-    }
-},
-async mounted() {
-    await enableEth()
-    this.getResults()
-    this.address = await getAddress()
-
-}
+  },
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-table {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+<style scoped>
+    #main-app{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .bridge-select{
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        text-align: center;
+        width: 250px;
+        padding: 12px;
+        margin: 40px auto;
+        font-size: 16px;
+        color: #2c3e50;
+        border-radius: 6px;
+    }
+    .bridge-select:focus{
+        outline: none;
+    }
 </style>
