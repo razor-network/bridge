@@ -1,19 +1,19 @@
 [[redirects]]
   from = "https://matic.razor.network/"
-  to = "https://matic.razor.to/"
+  to = "https://bridge.razor.network/#/matic"
+  force = true
+
+  [[redirects]]
+  from = "http://matic.razor.network/"
+  to = "https://bridge.razor.network/#/matic"
   force = true
 
 [[redirects]]
   from = "https://skale.razor.network/"
-  to = "https://skale.razor.to/"
-  force = true
-  
-[[redirects]]
-  from = "http://matic.razor.network/"
-  to = "https://matic.razor.to/"
+  to = "https://bridge.razor.network/#/skale"
   force = true
 
 [[redirects]]
   from = "http://skale.razor.network/"
-  to = "https://skale.razor.to/"
+  to = "https://bridge.razor.network/#/skale"
   force = true
