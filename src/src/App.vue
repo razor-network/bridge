@@ -23,11 +23,11 @@
     import Skale from './SkaleBridge.vue';
     import Meter from './MeterBridge.vue';
     import Moonbeam from './MoonbeamBridge.vue';
-    import Algorand from './AlgorandBridge';
+    import Algorand from './AlgorandBridge.vue';
     import Matic from './MaticBridge';
 
 export default {
-    name: '#main-app',
+    name: 'main-app',
      components: {
     Skale,
     Meter,
@@ -47,6 +47,15 @@ export default {
             {id: 5, val: 'Meter'}
         ]
         }
+  },
+  mounted: function () {
+      var path = this.$route.path == '/' ? '/'  : this.$route.path.replace(/^\/|\/$/g, '');
+      if(path !== '/'){
+          path = path.charAt(0).toUpperCase() + path.slice(1);
+      } else {
+          path = 'Algorand'
+      }
+      this.selected = path;
   },
 }
 </script>

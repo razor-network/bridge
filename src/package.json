@@ -12,6 +12,7 @@
     "core-js": "^2.6.5",
     "meterify": "^1.4.5",
     "vue": "^2.6.10",
+    "vue-router": "^3.4.9",
     "web3": "^1.2.1"
   },
   "devDependencies": {
