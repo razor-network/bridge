@@ -68,15 +68,6 @@ module.exports = {
             skipDryRun: true,
             gasPrice: 0
         },
-        moonbeam: {
-            provider: () => new HDWalletProvider(mnemonic, 'https://rpc.testnet.moonbeam.network'),
-            network_id: 1287,
-            gas: 8000000,
-            confirmations: 0,
-            timeoutBlocks: 200,
-            skipDryRun: true,
-            gasPrice: 0
-        },
 
         // Another network with more advanced options...
         // advanced: {
