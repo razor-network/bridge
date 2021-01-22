@@ -1,19 +1,49 @@
 [[redirects]]
   from = "https://matic.razor.network/"
-  to = "https://matic.razor.to/"
+  to = "https://bridge.razor.network/#/matic"
+  force = true
+
+  [[redirects]]
+  from = "http://matic.razor.network/"
+  to = "https://bridge.razor.network/#/matic"
   force = true
 
 [[redirects]]
   from = "https://skale.razor.network/"
-  to = "https://skale.razor.to/"
-  force = true
-  
-[[redirects]]
-  from = "http://matic.razor.network/"
-  to = "https://matic.razor.to/"
+  to = "https://bridge.razor.network/#/skale"
   force = true
 
 [[redirects]]
   from = "http://skale.razor.network/"
-  to = "https://skale.razor.to/"
+  to = "https://bridge.razor.network/#/skale"
+  force = true
+
+[[redirects]]
+  from = "https://moonbeam.razor.network/"
+  to = "https://bridge.razor.network/#/moonbeam"
+  force = true
+
+[[redirects]]
+  from = "http://moonbeam.razor.network/"
+  to = "https://bridge.razor.network/#/moonbeam"
+  force = true
+
+  [[redirects]]
+  from = "https://meter.razor.network/"
+  to = "https://bridge.razor.network/#/meter"
+  force = true
+
+  [[redirects]]
+  from = "http://meter.razor.network/"
+  to = "https://bridge.razor.network/#/meter"
+  force = true
+
+  [[redirects]]
+  from = "https://algorand.razor.network/"
+  to = "https://bridge.razor.network/#/algorand"
+  force = true
+
+[[redirects]]
+  from = "http://algorand.razor.network/"
+  to = "https://bridge.razor.network/#/algorand"
   force = true
