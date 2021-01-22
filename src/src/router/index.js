@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Skale from '../SkaleBridge.vue';
-import Meter from '../MeterBridge.vue';
-import Moonbeam from '../MoonbeamBridge.vue';
-import Algorand from '../AlgorandBridge.vue';
-import Matic from '../MaticBridge';
+// import Skale from '../SkaleBridge.vue';
+// import Meter from '../MeterBridge.vue';
+// import Moonbeam from '../MoonbeamBridge.vue';
+// import Algorand from '../AlgorandBridge.vue';
+// import Matic from '../MaticBridge';
 import App from '../App.vue';
 
 Vue.use(Router)
@@ -20,27 +20,27 @@ export default new Router({
     {
       path: '/moonbeam',
       name: 'Moonbeam',
-      component: Moonbeam
+      component: App
     },
     {
       path: '/skale',
       name: 'Skale',
-      component: Skale
+      component: App
     },
     {
       path: '/meter',
       name: 'Meter',
-      component: Meter
+      component: App
     },
     {
       path: '/algorand',
       name: 'Algorand',
-      component: Algorand
+      component: App
     },
     {
       path: '/matic',
       name: 'Matic',
-      component: Matic
+      component: App
     }
   ]
 })
