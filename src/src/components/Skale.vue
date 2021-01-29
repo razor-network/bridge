@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>🌉 Razor → SKALE Bridge 🌉</h1>
 
-    <h2> Make sure to install metamask and set provider to SKALE testnet at 'https://sip2211-0.skalenodes.com:10007' </h2>
+    <h2> Make sure to install metamask and set provider to SKALE testnet at 'https://dev-testnet-v1-1.skalelabs.com' </h2>
     <p>
      This is a Razor → SKALE bridge </p>
      <p>Create and see your query at <a href = "https://razorscan.io/#/query" >https://razorscan.io/#/query</a> </p>
