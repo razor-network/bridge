@@ -20,7 +20,7 @@ export const enableEth = async () => {
     // In the case the user has MetaMask installed, you can easily
     // ask them to sign in and reveal their accounts:
     await window.ethereum.enable()
-    web3 = new Web3(window.web3.currentProvider)
+    web3 = new Web3(window.ethereum)
     return true
   }
 }
@@ -28,18 +28,20 @@ export const enableEth = async () => {
 export const getResult = async (jobId) => {
   let bridgeBuild = require('../../build/contracts/Bridge.json')
 
-  let bridge = new web3.eth.Contract(bridgeBuild['abi'], bridgeBuild['networks'][1].address)
+  let bridge = new web3.eth.Contract(bridgeBuild['abi'], bridgeBuild['networks'][344435].address)
 
-  // const accounts = await web3.eth.getAccounts()
-  accounts = await ethereum.enable()
+  let result = []
 
   // console.log(accounts)
   const res = await bridge.methods.getResult(jobId).call()
-  // console.log(res)
-  return res
+  let name  = (await bridge.methods.getJob(jobId).call()).name
+  result.push(name)
+  result.push(res)
+  
+  return result
 }
 
 export const getAddress = async () => {
     let bridgeBuild = require('../../build/contracts/Bridge.json')
-    return bridgeBuild['networks'][1].address
+    return bridgeBuild['networks'][344435].address
 }

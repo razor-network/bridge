@@ -61,7 +61,7 @@ module.exports = {
 
         skale: {
             provider: () => new HDWalletProvider(mnemonic, skale),
-            network_id: '*',
+            network_id: 344435,
             gas: 8000000,
             confirmations: 0,
             timeoutBlocks: 200,
