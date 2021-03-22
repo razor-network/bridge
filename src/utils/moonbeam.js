@@ -28,7 +28,7 @@ export const enableEth = async () => {
 export const getResult = async (jobId) => {
   let bridgeBuild = require('../../build/contracts/Bridge.json')
 
-  let bridge = new web3.eth.Contract(bridgeBuild['abi'], '0xC6F33c0F15FE5e3A51A019524ac43574cFF29EFB')
+  let bridge = new web3.eth.Contract(bridgeBuild['abi'], '0xa7f180fb18EF0d65049fE03d4308bA33a28b6513')
 
   // const accounts = await web3.eth.getAccounts()
   let result = []
@@ -45,5 +45,5 @@ export const getResult = async (jobId) => {
 
 export const getAddress = async () => {
     let bridgeBuild = require('../../build/contracts/Bridge.json')
-    return '0xC6F33c0F15FE5e3A51A019524ac43574cFF29EFB'
+    return '0xa7f180fb18EF0d65049fE03d4308bA33a28b6513'
 }
