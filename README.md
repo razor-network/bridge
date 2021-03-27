@@ -1,13 +1,13 @@
 # Bridge
 
-This repository provides the bridge between Razer Network and other decentralized Networks.
+This repository provides the bridge between Razor Network and other decentralized Networks.
 
 ## Summary
 
 - [Getting Started](README.md#getting-started)
 - [Dependencies](src/package.json)
 - [Supported Networks](README.md#supported-networks)
-- [Visit RazerScan](README.md#visit-razerscan)
+- [Visit RazorScan](README.md#visit-razorscan)
 
 ## Getting Started
 
@@ -84,6 +84,6 @@ Type of Networks available:
 4. Moonbeam
 5. Meter
 
-## Visit RazerScan
+## Visit RazorScan
 
-You can visit RazerScan on [razerscan.io](https://razorscan.io/#/dashboard)
+You can visit RazorScan on [razorscan.io](https://razorscan.io/#/dashboard)
